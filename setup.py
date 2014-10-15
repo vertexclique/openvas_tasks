@@ -53,7 +53,7 @@ metadata = {
     'author': 'Mahmut Bulut (vertexclique)',
     'author_email': 'mahmut' + '@' + 'mahmutbulut.com',
     'license': 'GPLv3',
-    'url': 'http://www.ctech.com.tr/',
+    'url': 'http://vertexclique.github.io/openvas_tasks',
     'download_url': 'https://github.com/vertexclique/openvas_tasks/zipball/master',
     'install_requires': requires,
     'zip_safe': False,

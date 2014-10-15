@@ -37,4 +37,19 @@ class Tasks(OvasBaseModel):
 	def __init__(self):
 		super(Tasks, self).__init__()
 
+class Results(OvasBaseModel):
+	"""docstring for Results"""
+	id = PrimaryKeyField()
+	uuid = TextField()
+	task = IntegerField()
+	subnet = TextField()
+	host = TextField()
+	port = TextField()
+	nvt = TextField()
+	type = TextField()
+	description = TextField()
+	report = IntegerField()
 
+	def __init__(self):
+		super(Results, self).__init__()
+		

@@ -21,8 +21,20 @@ class OvasReceiver(object):
 
     def get_all_tasks_data(self):
         allscans = []
-        # print(Tasks._meta.database.__dict__)
+        print(Tasks._meta.database.__dict__)
         for scan in Tasks.select():
             allscans.append(scan)
         return allscans
 
+    def get_all_tasks_count(self):
+        return Tasks.select().count()
+
+    def get_all_results(self):
+        allresults = []
+        print(Results._meta.database.__dict__)
+        for result in Results.select():
+            allresults.append(result)
+        return allresults
+
+    def get_all_results_count():
+        return Results.select().count()
