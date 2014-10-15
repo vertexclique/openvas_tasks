@@ -36,5 +36,6 @@ class OvasReceiver(object):
             allresults.append(result)
         return allresults
 
-    def get_all_results_count():
+    def get_all_results_count(self):
         return Results.select().count()
+
