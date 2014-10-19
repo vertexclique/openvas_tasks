@@ -1,6 +1,7 @@
 OpenVAS Tasks
 ============
 [![Build Status](https://magnum.travis-ci.com/vertexclique/openvas_tasks.svg?token=bkEkktEjr45s2RgAZavn)](https://magnum.travis-ci.com/vertexclique/openvas_tasks)
+
 This project is made for interacting with OpenVAS tasks in OpenVAS tasks database. It is used for acquiring all the tasks data,
 history of them, report mappings and results. By default it will use the database on scanner machine and contains ORM mappings mostly (but not all of them). If you want to extend this project we happily accept your PRs.
 Default installation of OpenVAS tasks database reside in `/var/lib/openvas/mgr/tasks.db`.
