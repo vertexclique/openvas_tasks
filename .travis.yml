@@ -3,6 +3,6 @@ python:
   - "2.5"
   - "2.6"
   - "2.7"
-before_script: curl -O
+before_script: wget -O "tasks.db" https://copy.com/rMYk0ODFvW9AQHe8
 install: python setup.py develop
-script: nosetests
+script: python tests/test.py
