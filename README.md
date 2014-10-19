@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/vertexclique/openvas_tasks.png?label=ready&title=Ready)](https://waffle.io/vertexclique/openvas_tasks)
 OpenVAS Tasks
 ============
 [![Build Status](https://magnum.travis-ci.com/vertexclique/openvas_tasks.svg?token=bkEkktEjr45s2RgAZavn)](https://magnum.travis-ci.com/vertexclique/openvas_tasks)
