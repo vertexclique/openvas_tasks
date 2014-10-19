@@ -73,7 +73,6 @@ are browsable.
 
 ### Reports
 
-```
  - id = `id of report`
  - uuid = `uuid of report`
  - owner = `owner id of report`
@@ -97,7 +96,7 @@ are browsable.
  - override_lows = `overridden lows`
  - override_logs = `overridden logs`
  - override_fps = `overridden FPs`
-```
+
 ### Targets
 
 - id = `id of the target`
