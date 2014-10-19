@@ -1,8 +1,8 @@
-[![Stories in Ready](https://badge.waffle.io/vertexclique/openvas_tasks.png?label=ready&title=Ready)](https://waffle.io/vertexclique/openvas_tasks)
 OpenVAS Tasks
 ============
 [![Build Status](https://magnum.travis-ci.com/vertexclique/openvas_tasks.svg?token=bkEkktEjr45s2RgAZavn)](https://magnum.travis-ci.com/vertexclique/openvas_tasks)
 [![PyPI version](https://badge.fury.io/py/openvas_tasks.svg)](http://badge.fury.io/py/openvas_tasks)
+[![Stories in Ready](https://badge.waffle.io/vertexclique/openvas_tasks.png?label=ready&title=Ready)](https://waffle.io/vertexclique/openvas_tasks)
 
 This project is made for interacting with OpenVAS tasks in OpenVAS tasks database. It is used for acquiring all the tasks data,
 history of them, report mappings and results. By default it will use the database on scanner machine and contains ORM mappings mostly (but not all of them). If you want to extend this project we happily accept your PRs.
