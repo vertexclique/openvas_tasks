@@ -4,11 +4,6 @@
 from ovastypes import *
 from datetime import *
 
-# -- Describe TASKS
-# CREATE TABLE tasks   (id INTEGER PRIMARY KEY, uuid, owner INTEGER, name, hidden INTEGER, time, comment, description, run_status INTEGER
-# , start_time, end_time, config INTEGER, target INTEGER, schedule INTEGER, schedule_next_time, slave INTEGER, config_location INTEGER, 
-# target_location INTEGER, schedule_location INTEGER, slave_location INTEGER, upload_result_count INTEGER, creation_time, modification_time)
-
 class OvasReceiver(object):
     """docstring for OvasReceiver"""
 
@@ -60,3 +55,22 @@ class OvasReceiver(object):
         .group_by(Reports.task) \
         .count()
 
+    def get_past_tasks(self):
+        pasttasks = []
+        for scan in \
+        Tasks.select(Tasks.name, fn.Count(Reports.task).alias('total'), Targets.hosts , Tasks.run_status, Tasks.start_time, Tasks.end_time) \
+        .join(Reports, on=(Reports.task == Tasks.id)) \
+        .join(Targets, on=(Targets.id == Tasks.target)) \
+        .where((Tasks.hidden != 0)) \
+        .naive() \
+        .group_by(Reports.task):
+            pasttasks.append(scan)
+        return pasttasks
+
+    def get_past_tasks_count(self):
+        return Tasks.select(Tasks.name, fn.Count(Reports.task).alias('total'), Tasks.run_status, Tasks.start_time, Tasks.end_time) \
+        .join(Reports, on=(Reports.task == Tasks.id)) \
+        .where((Tasks.hidden != 0)) \
+        .naive() \
+        .group_by(Reports.task) \
+        .count()

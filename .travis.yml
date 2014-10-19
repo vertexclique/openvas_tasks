@@ -1,0 +1,8 @@
+language: python
+python: 
+  - "2.5"
+  - "2.6"
+  - "2.7"
+before_script: curl -O
+install: python setup.py develop
+script: nosetests

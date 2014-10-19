@@ -8,6 +8,8 @@ b.results_data()
 b.results_count()
 b.shown_tasks()
 b.shown_tasks_count()
+b.past_tasks()
+b.past_tasks_count()
 
 
 # a = openvas_tasks.Pool()

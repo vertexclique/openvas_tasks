@@ -1,3 +1,5 @@
 *.pyc
 *.egg-info
 *.db
+.idea
+venv
