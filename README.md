@@ -1,6 +1,6 @@
 OpenVAS Tasks
 ============
-[![Build Status](https://magnum.travis-ci.com/vertexclique/openvas_tasks.svg?token=bkEkktEjr45s2RgAZavn)](https://magnum.travis-ci.com/vertexclique/openvas_tasks)
+[![Build Status](https://travis-ci.org/vertexclique/openvas_tasks.svg)](https://travis-ci.org/vertexclique/openvas_tasks)s
 [![PyPI version](https://badge.fury.io/py/openvas_tasks.svg)](http://badge.fury.io/py/openvas_tasks)
 [![Stories in Ready](https://badge.waffle.io/vertexclique/openvas_tasks.png?label=ready&title=Ready)](https://waffle.io/vertexclique/openvas_tasks)
 
