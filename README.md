@@ -1,6 +1,6 @@
 OpenVAS Tasks
 ============
-[![Build Status](https://travis-ci.org/vertexclique/openvas_tasks.svg)](https://travis-ci.org/vertexclique/openvas_tasks)s
+[![Build Status](https://travis-ci.org/vertexclique/openvas_tasks.svg)](https://travis-ci.org/vertexclique/openvas_tasks)
 [![PyPI version](https://badge.fury.io/py/openvas_tasks.svg)](http://badge.fury.io/py/openvas_tasks)
 [![Stories in Ready](https://badge.waffle.io/vertexclique/openvas_tasks.png?label=ready&title=Ready)](https://waffle.io/vertexclique/openvas_tasks)
 
@@ -22,7 +22,31 @@ import openvas_tasks
 b = openvas_tasks.Pool("/Users/vertexclique/projects/tasks.db")
 b.shown_tasks()
 ```
-## Fields
+
+# API
+
+ - **openvas_tasks.Pool().tasks_data()**
+	 - fetches all tasks data from db
+ - **openvas_tasks.Pool().tasks_count()**
+	 - fetches tasks count from db
+ - **openvas_tasks.Pool().results_data()**
+	 - fetches all result data from db
+ - **openvas_tasks.Pool().results_count()**
+	 - fetches results count from db
+ - **openvas_tasks.Pool().shown_tasks()**
+	 - fetches all shown tasks in any openvas gui (like greenbone)
+ - **openvas_tasks.Pool().shown_tasks_count()**
+	 - fetches shown tasks count
+ - **openvas_tasks.Pool().past_tasks()**
+	 - fetches all previous and deleted tasks data
+ - **openvas_tasks.Pool().past_tasks_count()**
+	 - fetches previous and deleted tasks count
+ - **openvas_tasks.Pool().task_detail(taskid)**
+	 - fetches all task detail with specified task id
+ - **openvas_tasks.Pool().task_detail_count(taskid)**
+	 - fetches task detail count from db
+
+## Fields of Objects
 Object fields of results. Currently:
 
 * Tasks
@@ -112,3 +136,47 @@ are browsable.
 - port_range = `port range for target whatever the task hits for`
 - creation_time = `creation time for target`
 - modification_time = `modification time of target`
+
+### Configs
+
+- id = `configs id`
+- uuid = `configs uuid`
+- owner = `config owner id`
+- name = `config name`
+- nvt_selector = `nvt feed selector`
+- comment = `comment for configs`
+- family_count = `family count of nvts`
+- nvt_count = `nvt count`
+- families_growing = `expanded family listings count`
+- nvts_growing = `expanded nvt listings count`
+- creation_time = `creation time for config`
+- modification_time = `modification time for config`
+
+### Alerts
+
+- id = `id for alert`
+- uuid = `uuid for alert`
+- owner = `owner id for alert`
+- name = `name of alert`
+- comment = `comment of alert`
+- event = `event of alert`
+- condition = `condition of alert`
+- method = `alert method`
+- filter_col = `filter column for multiple alert types`
+- creation_time = `creation time for alert`
+- modification_time = `modification time for alert`
+
+### Slaves
+**This object is used in master-slave mode. It won't exist if you have single point installation.**
+
+- id = `id for slave`
+- uuid = `uuid for slave`
+- owner = `owner id for slave`
+- name = `name for slave`
+- comment = `comment for slave`
+- host = `host of the slave`
+- port = `port of the slave`
+- login = `login of the slave`
+- password = `password of the slave`
+- creation_time = `creation time for slave`
+- modification_time = `modification time for slave`

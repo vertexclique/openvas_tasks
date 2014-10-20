@@ -38,11 +38,17 @@ class Pool(object):
     def past_tasks_count(self):
         return self.recv.get_past_tasks_count()
 
+    def task_detail(self, taskid):
+        return self.recv.get_task_detail(taskid=taskid)
+
+    def task_detail_count(self, taskid):
+        return self.recv.get_task_detail_count(taskid=taskid)
+
 # def data(dbpath="/var/lib/openvas/mgr/tasks.db"):
 # b = OvasReceiver()
 # if self.dbpath:
-# 		b.set_db_path(self.dbpath)
-# 	return b.get_all_tasks_data()
+# b.set_db_path(self.dbpath)
+# return b.get_all_tasks_data()
 
 # def count():
-# 	b = OvasReceiver()
+# b = OvasReceiver()

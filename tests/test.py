@@ -11,7 +11,8 @@ b.shown_tasks()
 b.shown_tasks_count()
 b.past_tasks()
 b.past_tasks_count()
-
+b.task_detail(4)
+assert b.task_detail_count(4) == 8
 
 # a = openvas_tasks.Pool()
 # a.tasks_data()
